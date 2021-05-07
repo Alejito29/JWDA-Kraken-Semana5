@@ -1,0 +1,253 @@
+[
+  {
+    "uri": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/project/./features/my_first.feature",
+    "id": "shared-board-connection",
+    "keyword": "Feature",
+    "name": "Shared board connection",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "shared-board-connection;as-a-first-user-i-say-hi-to-a-second-user",
+        "keyword": "Scenario",
+        "name": "As a first user I say hi to a second user",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@user1",
+            "line": 3
+          },
+          {
+            "name": "@web",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/web/support/app_life_cycle_hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1016118000
+            }
+          },
+          {
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:7"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": " Unable to find chromedriver. Please download the server from http://chromedriver.storage.googleapis.com/index.html and place it somewhere on your PATH. More info at https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver.\n (Selenium::WebDriver::Error::WebDriverError)\nC:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:8:in `Before'",
+              "duration": 159694600
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I navigate to page \"https://www.notebookcast.com/\"",
+            "line": 5,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:11"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I click on element having css selector \"a#home-start-drawing-button\"",
+            "line": 6,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:50"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I enter \"Kraken1\" into input field having id \"nickName\"",
+            "line": 7,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I select option with value \"2\" for dropdown with id \"boardType\"",
+            "line": 8,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:57"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I enter \"Example Board\" into input field having id \"boardTitle\"",
+            "line": 9,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:19"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I click on element having css selector \".btn.btn-primary.btn-sm.acceptcookies\"",
+            "line": 10,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:50"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I click on element having id \"createBoardButton\"",
+            "line": 11,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I store a variable with the current url",
+            "line": 12,
+            "match": {
+              "location": "features/web/step_definitions/web_steps.rb:4"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I send a signal to user 2 containing \"hi\"",
+            "line": 13,
+            "match": {
+              "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:67"
+            },
+            "result": {
+              "status": "skipped"
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "C:/Users/wilso/Desktop/kraken/KrakenMobile-1.0.9/lib/kraken-mobile/steps/web/kraken_steps.rb:105"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/web/support/app_life_cycle_hooks.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8790600
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
