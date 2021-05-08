@@ -29,6 +29,7 @@ ChromeDriver       Version  ChromeDriver 90.0.4430.24
 Java               Version  1.8.0_91
 Rubby              Version  ruby 2.6.7p197
 Android studio     Version  4.1.1
+Chromium           Version  92.0.4499.0
 ```
 
 ### Instalación 🔧
@@ -228,44 +229,16 @@ Este proyecto está probando las siguientes funcionalidades:
 Para ejecutar unicamente debe  hacer lo siguiente:
 
 ```
-Ubicarse en la carpeta donde realizo la instalación de las node modules
-```
-
-![npm install ](https://user-images.githubusercontent.com/78820446/117474290-68fa9900-af20-11eb-891f-1ef3f9145f92.PNG)
-
-
-Posteriormente debe editar el siguente archivo, este archivo se encuentra dentro de la carpeta principal:
-
-```
-costant-page.js
-```
-En el archivo costant-page.js en la carpeta page-objects editar las siguientes variables: 
-
-1. Remplace los valore de **USER** y **password**, por su usuario y contraseña que registró en Ghost, ejemplo:
-
-    **static USER = 'arodriguezt9509@gmail.com';
-    **static PASSWORD = '********';
-
-2. Asegurese que la url sea la siguiente: 
-    **static BASE_URL = 'http://localhost:2368/'**
-
-3. Asegurese de tener la vista del sitio como pública. Para esto debe ir a "General Settings" en Ghost y en la sección "Advanced Settings" debe tener deshabilitada la opción de "Make this site private", como se observa a continuación.
-
-![image](https://user-images.githubusercontent.com/78829003/117516478-d75e4c00-af5e-11eb-8002-3ff61f2e25d6.png)
-
-Por ultimo ya habiendo configurado los archivos y cambiado los datos por su  maquina unicamente queda ejecutar el siguiente comando:. 
-
-```
-cypress run --headless
+Ubicarse en la carpeta donde realizo la instalacion de bundle install, una ves ubicado en la carpeta de proyectos debera ejecutar el siguiente comando bundle exec kraken-mobile run, en este caso si realizo las configuraciones de una manera correcta debera empezar a ejecutarse los test, en caso contrario debera revisar alguna de los pasos de instalacion 
 
 ```
 
-Este comando empezara a ejecutar los test, deberan salir exitosos   en la consola 
+![Test](https://user-images.githubusercontent.com/78820446/117548877-e8f63100-affc-11eb-8b66-73b9c4db6e8f.PNG)
 
 
 ### Analice las pruebas end-to-end 🔩
 
-En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los resultados de la consola y videos.
+En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los resultados de la consola y ver los resultados en la carpeta **JWDA-Kraken-Semana5\proyecto\reports**
 
 
 ## Construido con 🛠️
