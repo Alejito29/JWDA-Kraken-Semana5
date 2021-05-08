@@ -1,343 +1,310 @@
-<p align="center">
-    <img src="./reporter/assets/images/kraken.png" alt="kraken logo" width="140" height="193">
-<h1 align="center">Kraken</h1>
+# JWDA-Semana5
+Repositorio del grupo conformado por: Angelica Rodriguez, Jorge Barrera, Wilson Gonzalez y Dario Herrera
 
-Kraken is an open source automated android and web E2E testing tool that supports and validates scenarios that involve the inter-communication between two or more users. It works in a Black Box manner meaning that it is not required to have access to the source code of the application but instead it can be run with the APK (Android package file format) and web page URL. Kraken uses signaling for coordinating the communication between the devices using a file based protocol.
 
-**Kraken is partially supported by a Google Latin America Research Award (LARA) 2018**
+# Kraken 
 
-# Video
-[![krakenThumbnail](./reporter/assets/images/krakenThumbnail.jpg)](https://www.youtube.com/watch?v=hv5gFIpW3gM&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=1)
+Este proyecto contiene el codigo de las pruebas E2E del codigo  GHOST 3.3.0 a traves de Kraken y Gherkins, la url  para las pruebas fue la siguiente http://localhost:2368/
 
-# Publications
+## Comenzando 🚀
 
-- *“Kraken-Mobile: Cross-Device Interaction-based Testing of Android Apps”*, [William Ravelo-Méndez](https://ravelinx22.github.io/), [Camilo Escobar-Velásquez](https://caev03.github.io/), and [Mario Linares-Vásquez](https://profesores.virtual.uniandes.edu.co/mlinaresv/en/inicio-en/), *Proceedings of the 35th IEEE International Conference on Software Maintenance and Evolution ([ICSME’19](https://icsme2019.github.io/))*, Tool Demo Track, Cleveland, OH, USA, September 30th - October 4th, 2019, to appear 4 pages (52% Acceptance Rate) [[pdf](https://thesoftwaredesignlab.github.io/KrakenMobile/assets/pdfs/icsme19.pdf)][[bibtex](https://thesoftwaredesignlab.github.io/KrakenMobile/assets/pdfs/icsme19.bib)]
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-# Technologies
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-Kraken uses [calabash-android](https://github.com/calabash/calabash-android) and [selenium-webdriver](https://github.com/SeleniumHQ/selenium) for running automated E2E tests in each device or emulator and [cucumber](https://github.com/cucumber/cucumber-ruby) for running your feature files written with Gherkin sintax.
 
-# 🔨 Installation
+### Pre-requisitos 📋
 
-### Prerequisites
-
-Kraken requires Ruby 2.20 or higher but we recommend using ~2.3 version. We use calabash-android for mobile testing, you can check their prerequisites at this [link](https://github.com/calabash/calabash-android/blob/master/documentation/installation.md). For web testing we use selenium-webdriver, you can check their prerequisites as well at this [link](https://www.selenium.dev/selenium/docs/api/rb/).
-
-- Ruby at least version 2.3.1
-- Java JDK
-- Android SDK
-- Chromedriver (Version ~83 recommended) or Geckodriver (Only if you use Kraken web)
-
-You need to have configured ANDROID_HOME, ANDROID_HOME/platform_tools and JAVA_HOME in your environment variables.
-
-Installing and managing Kraken Gem is done through the gem command. To install Kraken’s gem run the following command.
+Para poder ejecutar de manera correcta el proyecto debe tener configurado las siguientes herramientas en su maquina
 
 ```
-$ gem install kraken-mobile
+Node,              Version  12.17.0
+Cypress,           Version  7.2.0
+Chrome,            Version  90.0.4430.93
+Git,               Version  2.21.0
+Ghost ,            Version  3.3.0
+Kraken,            Version  1.0.9  
+ADB Android ,      Version  30.0.5-6877874   
+ChromeDriver       Version  ChromeDriver 90.0.4430.24
+Java               Version  1.8.0_91
+Rubby              Version  ruby 2.6.7p197
+Android studio     Version  4.1.1
 ```
 
-NOTE: If you are having trouble running Kraken in your Windows operating system refer to the this [guide](https://github.com/TheSoftwareDesignLab/KrakenMobile/blob/master/docs/WINDOWS_GUIDE.md) specifying steps to solve this issues.
+### Instalación 🔧
 
-# Signaling
+En este caso para ejecutar el proyecto debe haber instalado las herramientas indicadas anteriormente en el paso de **Pre-requisitos**, una vez instaladas debe ejecutar lo siguiente 
 
-Signaling is a protocol used for the communication of two or more devices running in parallel. It is based in the idea that each browser, emulator or real device has a communication channel where he can receive signals sent from other devices which contain information or actions that are supposed to be executed. This type of protocol is commonly used in automated mobile E2E testing tools that validate scenarios involving the inter-communication and collaboration of two or more applications.
-
-# Writing your first test
-
-### Generate cucumber feature skeleton
-
-First you need to generate the cucumber feature skeleton where your tests are going to be saved. To achieve this you should run `kraken-mobile gen`. It will create the skeleton in your current folder like this:
+Pasos
 
 ```
-features
-|_support
-| |_app_installation_hooks.rb
-| |_app_life_cycle_hooks.rb
-| |_env.rb
-|_step_definitions
-| |_mobile_steps.rb
-|_web
-| |_step_definitions
-| | |_web_steps.rb
-| |_support
-| | |_app_life_cycle_hooks.rb
-|_my_first.feature
+Revisar que se encuentre configurado node de manera correcta, se realiza de la siguiente manera
 ```
 
-### Write a test
+* Abrir la terminal de su equipo, esta guia estara para un sistema operativo Windows, pero si configuro de manera exitosa las herramientas nombradas en  **Pre-requisitos** no deberia haber diferencia.
 
-The features goes in the features foler and should have the “.feature” extension. You can start out by looking at `features/my_first.feature`. You should also check calabash [predefined steps](https://github.com/calabash/calabash-android/blob/master/ruby-gem/lib/calabash-android/canned_steps.md).
+![Terminal](https://user-images.githubusercontent.com/78820446/117479939-8cc0dd80-af26-11eb-85a5-b3559aa18ac5.PNG)
 
-### Syntax
 
-In Kraken each feature is a test and each scenario within a feature is a test case that is run in a device. Each device is identified as an user and numbered from 1 to N. Ex: @user1, @user2, @user3. To check what is the number of a given device you should run `kraken-mobile devices`.
+* Ejecutar el comando node -v en la terminal, si aparece la version  esto indicaria que se encuentre instalado de manera correcta, en caso contrario debera revisar la instalacion de node en su maquina 
 
-```
-List of devices attached
-user1 - emulator-5554 - Android_SDK_built_for_x86
-user2 - emulator-5556 - Android_SDK_built_for_x86
-```
+![Node ](https://user-images.githubusercontent.com/78820446/117480756-9eef4b80-af27-11eb-98bd-cb7756ef43ac.PNG)
 
-After identifying what number each device has, you can write your test case giving each scenario the tag of a given device like so:
+
+El siguiente paso 
 
 ```
-Feature: Example feature
-
-  @user1
-  Scenario: As a first user I say hi to a second  user
-  Given I wait
-  Then I send a signal to user 2 containing "hi"
-
-  @user2
-  Scenario: As a second user I wait for user 1  to say hi
-  Given I wait for a signal containing "hi"
-  Then I wait
+Revisar que se encuentre configurado cypress de manera correcta, se realiza de la siguiente manera
 ```
 
-# Kraken steps
+* Abrir la terminal de su equipo, puede ser la misma que abrio en el paso anterior para verificar  la instalacion de node
 
-Kraken offers two main steps to help synchronizing your devices.
+![Terminal](https://user-images.githubusercontent.com/78820446/117479939-8cc0dd80-af26-11eb-85a5-b3559aa18ac5.PNG)
 
-### Signaling steps
+* Ahora ejecutar el siguiente comando **Cypress -v**, en caso que no aparesca las versiones en cada campo deberia revisar la instalacion del cypress
 
-To wait for a signal coming from another device for 10 seconds that is Kraken default timeout use the following step.
+![Cypress version](https://user-images.githubusercontent.com/78820446/117480168-dd383b00-af26-11eb-84f1-c3ef654e1a8a.PNG)
 
-```
-Then /^I wait for a signal containing "([^\"]*)"$/
-```
 
-To wait for a signal coming from another device for an specified number of seconds use the following step
+El siguiente paso 
 
 ```
-Then /^I wait for a signal containing "(  [^\"]*)" for (\d+) seconds$/
+Revisar que tenga instalado git en su maquina, se realiza de la siguiente manera
 ```
 
-To send a signal to another specified device use the following step
+* Abrir la terminal de su equipo, puede ser la misma que abrio en el paso anterior para verificar  la instalacion de node
+
+![Terminal](https://user-images.githubusercontent.com/78820446/117479939-8cc0dd80-af26-11eb-85a5-b3559aa18ac5.PNG)
+
+* Ahora ejecutar el siguiente comando **git --version**, en caso que no aparesca la version debera revisar la instalacion de git
+
+![git](https://user-images.githubusercontent.com/78820446/117470240-351d7480-af1c-11eb-9032-03f81b674975.PNG)
+
+
+
+El siguiente paso
 
 ```
-Then /^I send a signal to user (\d+) containing "([^\"]*)"$/
+Revisar que tenga instalado ruby de manera correcta
 ```
 
-### Signaling functions
+* Sobre la terminal ejecutada debe ejecutar el siguiente comando **ruby -v**, en caso que no aparesca la version debera revisar la instalacion de **ruby**
 
-Each device has an internal Kraken implementation of the signaling steps using the following functions.
+![ruby](https://user-images.githubusercontent.com/78820446/117545809-028f7c80-afed-11eb-9e57-9ce0ac6c87d5.PNG)
 
-```
-read_signal(content, time_out)
-```
 
-Waits for a signal with the specified content. This functions waits for the specified number of seconds in the timeout parameter before throwing an exception if specified.
+
+El siguiente paso
 
 ```
-write_signal(signal)
+Revisar que tenga instalado java instalado y configurado 
 ```
 
-Writes signal content to a device inbox.
+* Sobre la terminal ejecutada debe ejecutar el siguiente comando **java  -version** en caso que no aparesca la version deberia revisar la instalacion 
 
-# 📱Kraken Mobile
+![Java](https://user-images.githubusercontent.com/78820446/117546069-2ef7c880-afee-11eb-9eda-64cd2bdd8a10.PNG)
 
-## Running your tests
+* Si se reconoce el comando **java -version**
 
-To run your test:
-
-```
-$ kraken-mobile run <apk>
-```
-
-Kraken with the help of Calabash-Android will install an instrumentation along with your app and will start your tests in all devices connected (Check Kraken Settings section in order to learn how to specify in what devices your tests should be run).
-
-## 🦍 Mobile Monkey execution
-
-Kraken offers the possibility of generating random GUI events by using Android ADB monkey as well as its own implementation based in the idea of sending and reading random signals.
-
-### Android’s ADB Monkey
-
-To execute ADB monkey Kraken offers the following command specifying the number of events to be executed:
+El siguiente paso
 
 ```
-Then I start a monkey with (\d+) events
-```
-
-### Kraken’s own monkey
-
-Kraken extended the ADB monkey behavior by executing GUI events only in buttons and clickable views or inputs by offering the following command:
+Revisar que tenga configurado adb de manera correcta y se reconozca el comando por la terminal 
 
 ```
-Then I start kraken monkey with (\d+) events
-```
 
-## XML snapshot
+* Sobre la terminal ejecutada debe ejecutar el siguiente comando **adb --version** en caso que no aparesca la version deberia revisar la instalacion 
 
-Kraken makes it possible to save the XML presented by the current view in a specific device, this is convenient to identify view ids, asserting the correct XML is presented after an action has being completed or running static analyzing tools.
 
-### Saving the snapshot
+![ab](https://user-images.githubusercontent.com/78820446/117546179-cc52fc80-afee-11eb-9788-d93a68e83aa5.PNG)
 
-To save the snapshot of the current view, Kraken offers the following step specifying where the file is going to be saved:
+* Si se encuentra configurado el **adb** de manera correcta deberan configurar las siguientes variables de entorno adicionales para el correcto funcionamiento
 
-```
-Then I save device snapshot in file with path "([^\"]*)"
-```
+  - ANDROID_HOME
+  
+![Android  sdk](https://user-images.githubusercontent.com/78820446/117546292-54d19d00-afef-11eb-93b4-9197aa4e9880.PNG)
 
-# 🌎 Kraken Web
+![SDK configuracion](https://user-images.githubusercontent.com/78820446/117546341-93675780-afef-11eb-959a-6c230f0e6253.PNG)
 
-Kraken is extended to run also in web browsers and orchestrate the communication with other browsers running different websites or mobile applications that are being executed on physical devices or emulators. With the help of ChromeDriver/Geckodriver, selenium-webdriver and Cucumber we run test scenarios using Gherkin syntax as well as Kraken predefined signaling steps described before.
+  - Adicional agregar las siguientes variables de entorno en la opcion de **path**:  **%ANDROID_HOME%\tools** **%ANDROID_HOME%\tools\bin** **C:\Users\wilso\AppData\Local\Android\Sdk\platform-tools poner la ruta de su SDK** 
 
-## Specifying a web user in a test
+![entorno](https://user-images.githubusercontent.com/78820446/117546536-7da66200-aff0-11eb-804c-8101510b99b9.png)
 
-To specify that user is going to be run in a web browser instead of a mobile device you need to tag the scenario with @web. If a scenario is not tagged with @web Kraken will assume that is a mobile user and will attempt to run all steps in a mobile manner.
+El siguiente paso 
 
-```bash
-Feature: Example feature
 
-  @user1 @web
-  Scenario: As a first user I say hi to a second  user
-	Given I navigate to page "https://www.gmail.com/"
-    Then I send a signal to user 2 containing "hi"
-
-  @user2 @web
-  Scenario: As a second user I wait for user 1  to say hi
-    Given I wait for a signal containing "hi"
-	Then I navigate to page "https://www.gmail.com/"
-```
-
-This scenario will open two web browsers and execute the signaling between them.
-
-## Web steps
-
-To see a list of all web steps available in Kraken, visit the following [link.](https://github.com/TheSoftwareDesignLab/KrakenMobile/blob/master/docs/WEB_STEPS.md)
-
-## Executing web only scenarios
-
-To run a test that only contains web users and as a result does not require an APK file, run the following command:
 
 ```
-$ kraken-mobile run
+Revisar que tenga instalado Ghost 3.3.0 de manera correcta, ya registrado un usuario e ingresando de manera correcta
 ```
 
-Kraken with the help of selenium-webdriver will start all required browsers and run your test scenario.
+* Sobre la carpeta que tiene configurado Ghost 3.3.0 debe ejecutar el siguiente comando **ghost start**, en caso de no salir de la siguiente manera tiene un error en la instalacion de Ghost 3.3.0 que debera revisar 
 
-## Specifying in what browser Kraken will run
+![ghost start](https://user-images.githubusercontent.com/78820446/117476511-a102db80-af22-11eb-91c7-78b66cf5dc65.PNG)
 
-Kraken uses ChromeDriver and Chrome as default web browser but provides support for Firefox and Geckodriver. To specify that your test is going to be run in Firefox, specify the environment variable BROWSER when running your tests as follows:
+* En caso de ser la primera vez en Ghost 3.3.0 debera registrarse y evidenciar que ingresa a la pantalla del home de Ghost, en caso que no ingrese a la pantalla, tiene algo mal configurado que debera revisar.
 
-```bash
-$ BROWSER=firefox kraken-mobile run
-```
+![Ghost](https://user-images.githubusercontent.com/78820446/117479495-060c0080-af26-11eb-9845-2cf9a2e9ed23.PNG)
 
-**Note: Make sure that you have Geckodriver and Firefox installed previously.**
 
-## 🦍 Web Monkey execution
 
-Kraken has implemented it's own monkey behavior by executing random GUI events in buttons, clickable views and inputs by offering the following command:
+El siguiente paso 
+
 
 ```
-Then I start kraken monkey with (\d+) events
+Clonar el repositorio a traves de git siguiendo los siguientes pasos 
 ```
 
-# Kraken Settings
+* Crear una carpeta vacia en cualquier ubicacion de su equipo 
+* Abrir la terminal y ubicarse en la ruta donde se encuentra creada la carpeta a traves de la terminal 
 
-Kraken uses kraken_mobile_settings.json to specify in what devices the tests should be run.
+![ruta terminal](https://user-images.githubusercontent.com/78820446/117470409-626a2280-af1c-11eb-94ee-e5463c3e506e.PNG)
 
-### Generate settings file
+* Clonar el repositorio a traves del siguiente commando  **git clone https://github.com/angelicamariarodriguez/JWDA-Semana5**
 
-The following command will show you the available connected devices or emulators and let you choose which ones you want to use.
+![git clone](https://user-images.githubusercontent.com/78820446/117471313-5af74900-af1d-11eb-9738-752c4f613512.PNG)
+
+
+
+El siguiente paso 
+
 
 ```
-$ kraken-mobile setup
+Dirigirse a  la carpeta clonada con la terminal del paso anterior 
 ```
 
-### Run tests with settings file
+* Sobre la carpeta creada en el paso anterior y el proyecto clonado, debe ejecutarse el siguiente comando **cd JWDA-Semana5**
+
+![CARPETA ](https://user-images.githubusercontent.com/78820446/117472609-b1b15280-af1e-11eb-8bd0-faa93ddb3865.PNG)
+
+* Sobre la carpeta **JWDA-Semana5** ejecutar **npm install** no debe salir ningun error en el proceso de instalacion
+
+![npm install ](https://user-images.githubusercontent.com/78820446/117474290-68fa9900-af20-11eb-891f-1ef3f9145f92.PNG)
+
+## Funcionalidades y estrategias 🚗
+
+Este proyecto está probando las siguientes funcionalidades:
+
+1. Manage Pages:
+    - Iniciar sesión en Ghost ir a post, filtar unicamente por la opcion de concepto
+    - Iniciar sesión en Ghost ir a post, filtar unicamente por concepto y autor ghost
+    - Iniciar sesión en Ghost ir a post, filtar unicamente por concepto, autor y tag
+    - Iniciar sesión en Ghost ir a post, filtar unicamente por concepto, autor,  tag y publicacion reciente
+3. Manage General Settings:
+    - Iniciar sesión en Ghost ir a configuraciones generales y editar el título y la descripción del sitio.
+    - Iniciar sesión en Ghost ir a configuraciones generales y editar la zona horaria del sitio.
+    - Iniciar sesión en Ghost ir a configuraciones generales y poner el sitio como privado.
+    - Iniciar sesión en Ghost ir a configuraciones generales y poner el sitio como público.
+4. Manage Login:
+    - Login con usuario y contraseña incorrectos
+    - Login con usuario y contraseña correctos
+    - Login con usuario correcto y contraseña incorrecta
+    - Login con usuario incorrecto y contraseña correcta
+ 4. Create Posts:
+    - Creación de post usando el botón "+" desde home
+    - Creación de post usando el botón "New post" desde listado de posts
+    - Creación de post con estado published usando el botón "New Post" desde listado de post
+    - Creación de post con estado scheduled usando el botón "New Post" desde listado de post
+ 5. Manage Tags:
+
+# Ejecutando las pruebas ⚙️
+
+Para ejecutar unicamente debe  hacer lo siguiente:
 
 ```
-$ kraken-mobile run <apk> --configuration=<kraken_mobile_settings_path>
+Ubicarse en la carpeta donde realizo la instalación de las node modules
 ```
 
-# 🗯 Extended Kraken functionalities
+![npm install ](https://user-images.githubusercontent.com/78820446/117474290-68fa9900-af20-11eb-891f-1ef3f9145f92.PNG)
 
-In the following sections we provide specification for shared functionality between Kraken mobile and web as well as some examples of Kraken in action.
 
-# Properties file
-
-Kraken uses properties files to store sensitive data such as passwords or api keys that should be used in your test cases.
-
-### Generate properties file
-
-The properties files should be a manually created JSON file with the following structure.
+Posteriormente debe editar el siguente archivo, este archivo se encuentra dentro de la carpeta principal:
 
 ```
-{
-    "@user1": {
-        "PASSWORD": "test"
-    },
-    "@user2": {
-        "PASSWORD": "test2"
-    }
-}
+costant-page.js
 ```
+En el archivo costant-page.js en la carpeta page-objects editar las siguientes variables: 
 
-### Use properties file in your test
+1. Remplace los valore de **USER** y **password**, por su usuario y contraseña que registró en Ghost, ejemplo:
 
-You can use the specified properties using the following sintax.
+    **static USER = 'arodriguezt9509@gmail.com';
+    **static PASSWORD = '********';
 
-```
-@user1
-Scenario: As a user
-    Given I wait
-    Then I see the text "<PASSWORD>"
-```
+2. Asegurese que la url sea la siguiente: 
+    **static BASE_URL = 'http://localhost:2368/'**
 
-### Run tests with settings file
+3. Asegurese de tener la vista del sitio como pública. Para esto debe ir a "General Settings" en Ghost y en la sección "Advanced Settings" debe tener deshabilitada la opción de "Make this site private", como se observa a continuación.
+
+![image](https://user-images.githubusercontent.com/78829003/117516478-d75e4c00-af5e-11eb-8002-3ff61f2e25d6.png)
+
+Por ultimo ya habiendo configurado los archivos y cambiado los datos por su  maquina unicamente queda ejecutar el siguiente comando:. 
 
 ```
-kraken-mobile run <apk> --properties=<kraken_mobile_properties_path>
-```
-
-# Use fake strings in tests
-
-Kraken offers a Fake string generator thanks to the Ruby gem [Faker](https://github.com/faker-ruby/faker), the list of supported faker types are listed as follows:
-
-- Name
-- Number
-- Email
-- String
-- String Date
-
-### Use a faker in a test
-
-Kraken keeps a record of every Fake string generated, thats why each string will have an id associated. To generate a Faker string you need to follow the structure “$FAKERNAME_ID”.
+cypress run --headless
 
 ```
-@user1
-Scenario: As a user
-    Given I wait
-    Then I enter text "$name_1" into field with id "view"
-```
 
-### Reusing a fake string
-
-As mentioned before, Kraken keeps record of every string generated with an id given to each string, this gives you the possibility of reusing this string later in your scenario. To reuse a string you can you need to append a $ character to the fake string as follows:
-
-```
-@user1
-Scenario: As a user
-    Given I wait
-    Then I enter text "$name_1" into field with id "view"
-    Then I press "add_button"
-    Then I should see "$$name_1"
-```
-
-# Examples
+Este comando empezara a ejecutar los test, deberan salir exitosos   en la consola 
 
 
-| Application  | Video | Feature File | Steps Definition | Properties file | Settings File | Report Link |
-|:-------------|:-------------|:-------------|:------------------|:-------|:-------|:-------|
-| Infinite Words | [video](https://www.youtube.com/watch?v=4lX7mO80w-4&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=3&t=0s)|[.feature](/examples/infinite-words/infinite_words.feature)|--- | ---  | ---  | [report](/examples/infinite-words/report/index.html) |
-| QuizUp | [video](https://www.youtube.com/watch?v=2mhZVTK0r6k&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=4&t=1s) | [.feature](/examples/quizup/quizup.feature)|[stepsDef](../gh-pages/examples/quizup/step_definitions/kraken_steps.rb) | --- |  --- | [report](/examples/quizup/report/index.html)  |
-| Spotify/Shazam | [video](https://www.youtube.com/watch?v=7AKsfY1KFX0&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=5&t=0s) | [.feature](/examples/shazam/shazam.feature)|[stepsDef](../gh-pages/examples/shazam/step_definitions/kraken_steps.rb) | [.json](/examples/shazam/kraken_properties.json) |  [.json](/examples/shazam/kraken_mobile_settings.json) | [report](/examples/shazam/report/index.html)  |
-| Spunky | [video](https://www.youtube.com/watch?v=WOhRWkdFaVk&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=6&t=25s) | [.feature](/examples/spunky/spunky.feature)|[stepsDef](../gh-pages/examples/spunky/step_definitions/kraken_steps.rb) | --- |  --- | [report](/examples/spunky/report/index.html)  |
-| Picap | [video](https://www.youtube.com/watch?v=RozQrmH_Z5k&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=7&t=3s) | [.feature](/examples/picap/picap.feature)|[stepsDef](../gh-pages/examples/picap/step_definitions/kraken_steps.rb) | [.json](/examples/picap/kraken_properties.json) |  --- | [report](/examples/picap/report/index.html)  |
-| AskFM | [video](https://www.youtube.com/watch?v=d9Gbdx8kFX8&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=8&t=0s) | [.feature](/examples/askfm/askfm.feature)|[stepsDef](../gh-pages/examples/askfm/step_definitions/kraken_steps.rb) | --- |  --- | [report](/examples/askfm/report/index.html)  |
-| Stick Men Fight | [video](https://www.youtube.com/watch?v=36OJKNj0nSo&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=9&t=4s) | [.feature](/examples/stick/stick.feature)|--- | --- |  --- | [report](/examples/stick/report/index.html)  |
-| Tic Tac Toe | [video](https://www.youtube.com/watch?v=F9pDJDYsL_w&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=10&t=2s) | [.feature](/examples/tictactoe/tictactoe.feature)|[stepsDef](../gh-pages/examples/tictactoe/step_definitions/kraken_steps.rb) | --- |  --- | [report](/examples/tictactoe/report/index.html)  |
-| Tumblr | [video](https://www.youtube.com/watch?v=eqFej2uJz4k&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=11&t=3s) | [.feature](/examples/tumblr/tumblr.feature)|[stepsDef](../gh-pages/examples/tumblr/step_definitions/kraken_steps.rb) | [.json](/examples/tumblr/kraken_properties.json) |  --- | [report](/examples/tumblr/report/index.html)  |
-| F3 | [video](https://www.youtube.com/watch?v=vESh6Jyp-so&list=PLF5U8kfVgRcJ3RCHt7cWmwlqN93brbVW-&index=12&t=0s) | [.feature](/examples/f3/f3.feature)|[stepsDef](../gh-pages/examples/f3/step_definitions/kraken_steps.rb) | [.json](/examples/f3/kraken_properties.json) |  --- | [report](/examples/f3/report/index.html)  |
+### Analice las pruebas end-to-end 🔩
+
+En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los resultados de la consola y videos.
+
+
+## Construido con 🛠️
+
+_Menciona las herramientas que utilizaste para crear tu proyecto_
+
+* [Node 12.17.0](https://nodejs.org/es/download/releases/) - Node
+* [Cypress](https://www.cypress.io/) - Cypress
+* [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Javascript
+
+## Autores ✒️
+
+_Autor_
+
+* **Wilson Alejandro Gonzalez Gaitan** - *Trabajo Inicial* - [Alejito29](https://github.com/Alejito29)
+* **Dario Fernando Herrera Gonzalez** - *Trabajo Inicial* - [dherrera54](https://github.com/dherrera54)
+* **Angelica Maria Rodriguez Torres** - *Trabajo Inicial* - [angelicamariarodriguez](https://github.com/angelicamariarodriguez9)
+* **Jorge Ivan Barrera Rea** - *Trabajo Inicial* - [ivanbrij](https://github.com/ivanbrij)
+
+## Video ✒️
+
+Muestra de los videos funcionando
+
+
+# Video de la funcionalidad Manage Login 
+
+
+https://user-images.githubusercontent.com/78820446/117517823-ef37cf00-af62-11eb-93b7-c67e00850680.mp4
+
+
+
+
+# Video de la funcionalidad Manage General Settings
+
+https://user-images.githubusercontent.com/78829003/117502637-68282e00-af45-11eb-9f1f-b89172229c92.mp4
+
+# Vide de la funcionalidad Manage Pages
+
+
+https://user-images.githubusercontent.com/78820446/117517836-f7900a00-af62-11eb-9524-9d9ecc34c33d.mp4
+
+
+
+# Video de la funcionalidad Create Posts
+
+
+https://user-images.githubusercontent.com/78746286/117514980-c1e72300-af5a-11eb-91f8-559ae5ecd82a.mp4
+
+
+# Video de la funcionalidad Manage Tags
+
+
+
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Copyleft) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
