@@ -235,10 +235,15 @@ Ubicarse en la carpeta donde realizo la instalacion de bundle install, una ves u
 
 ![Test](https://user-images.githubusercontent.com/78820446/117548877-e8f63100-affc-11eb-8b66-73b9c4db6e8f.PNG)
 
+* Resultado del index.html en la carpeta **JWDA-Kraken-Semana5\proyecto\reports\efcae4d5c418c58304d74bd3f8f17a5015496a2f5deddddaea015a17398442f3\index.html**
+
+![Captura](https://user-images.githubusercontent.com/78820446/117548984-86e9fb80-affd-11eb-9de3-854affc1cdec.PNG)
+
 
 ### Analice las pruebas end-to-end 🔩
 
 En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los resultados de la consola y ver los resultados en la carpeta **JWDA-Kraken-Semana5\proyecto\reports**
+
 
 
 ## Construido con 🛠️
@@ -247,6 +252,11 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Node 12.17.0](https://nodejs.org/es/download/releases/) - Node
 * [Cypress](https://www.cypress.io/) - Cypress
+* [Android studio](https://developer.android.com/studio) - Android
+* [Chromium](https://www.chromium.org/getting-involved/download-chromium) - Chromium
+* [JAVA](https://www.java.com/es/download/ie_manual.jsp) - Java
+* [Kraken](https://github.com/TheSoftwareDesignLab/KrakenMobile/archive/refs/tags/1.0.9.zip.) - Kraken
+* [Chrome](https://www.google.com/intl/es/chrome/?brand=UUXU&gclid=CjwKCAjw7diEBhB-EiwAskVi10CI0gLPlO0E3zn_0-3gOnt60O2j_i2Jr_gHLJIEkfyP0JssFBki4hoC4sYQAvD_BwE&gclsrc=aw.ds) - Chrome
 * [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Javascript
 
 ## Autores ✒️
@@ -258,34 +268,61 @@ _Autor_
 * **Angelica Maria Rodriguez Torres** - *Trabajo Inicial* - [angelicamariarodriguez](https://github.com/angelicamariarodriguez9)
 * **Jorge Ivan Barrera Rea** - *Trabajo Inicial* - [ivanbrij](https://github.com/ivanbrij)
 
-## Video ✒️
+## Imagenes ✒️
 
-Muestra de los videos funcionando
-
-
-# Video de la funcionalidad Manage Login 
+Muestra las imagenes tomadas por la herramienta
 
 
-https://user-images.githubusercontent.com/78820446/117517823-ef37cf00-af62-11eb-93b7-c67e00850680.mp4
+# Imagenes  de la funcionalidad Login
 
+![2a3b7e25556eb2bb5336fdd3](https://user-images.githubusercontent.com/78820446/117549054-f06a0a00-affd-11eb-97df-868e8dc226ad.png)
+
+![1463f112e97f62838d9a9ed7](https://user-images.githubusercontent.com/78820446/117549055-f233cd80-affd-11eb-9197-8660b3ab1990.png)
+
+![50166cce397356b2812bd5e4](https://user-images.githubusercontent.com/78820446/117549059-f7911800-affd-11eb-91ce-a39cde91315c.png)
+
+![b36af3b6507ed4dc1d99c40b](https://user-images.githubusercontent.com/78820446/117549060-fb249f00-affd-11eb-8459-820d6d74440e.png)
+
+![d82204966f5c675510098863](https://user-images.githubusercontent.com/78820446/117549063-fd86f900-affd-11eb-91eb-fc6471a44c97.png)
 
 
 
 # Video de la funcionalidad Manage General Settings
 
-https://user-images.githubusercontent.com/78829003/117502637-68282e00-af45-11eb-9f1f-b89172229c92.mp4
+
 
 # Vide de la funcionalidad Manage Pages
 
 
-https://user-images.githubusercontent.com/78820446/117517836-f7900a00-af62-11eb-9524-9d9ecc34c33d.mp4
+![90bda705c066fdd40b51f11c](https://user-images.githubusercontent.com/78820446/117549087-1f807b80-affe-11eb-9ee4-884b14c4bad2.png)
 
+![94ee8aef4c6b15fd14c8df3a](https://user-images.githubusercontent.com/78820446/117549090-227b6c00-affe-11eb-9cad-348df0088718.png)
+
+![0639f3a9dc7b465ddc0eed71](https://user-images.githubusercontent.com/78820446/117549093-24ddc600-affe-11eb-8275-bcc653cf579a.png)
+
+![5142df91ef7c667b6c00b849](https://user-images.githubusercontent.com/78820446/117549098-2909e380-affe-11eb-96b6-bedaffdae2aa.png)
+
+![8462c47998cce801f78dda22](https://user-images.githubusercontent.com/78820446/117549102-2c04d400-affe-11eb-9d94-f154e70be02c.png)
+
+![a215ab78840fda95440e958b](https://user-images.githubusercontent.com/78820446/117549105-2effc480-affe-11eb-8040-0d5a48b0eff9.png)
+
+![a70789ec58cb6c26348888ef](https://user-images.githubusercontent.com/78820446/117549110-31fab500-affe-11eb-9fb1-fb2844f2c204.png)
+
+![bcb48b2bff7043d2826ea43e](https://user-images.githubusercontent.com/78820446/117549113-345d0f00-affe-11eb-8330-e92424ef0281.png)
+
+![c2c049a289aea53b47764639](https://user-images.githubusercontent.com/78820446/117549116-37f09600-affe-11eb-81aa-b795cff433cd.png)
+
+![d28f8370c91dc19456cfd52d](https://user-images.githubusercontent.com/78820446/117549121-3c1cb380-affe-11eb-9724-ab58996594b7.png)
+
+![dd32beba3477e1f682b7e8be](https://user-images.githubusercontent.com/78820446/117549124-3f17a400-affe-11eb-948c-6d4cf96e055c.png)
+
+![ebc4f4ff97277282856bb878](https://user-images.githubusercontent.com/78820446/117549130-42129480-affe-11eb-9659-eacf2247819e.png)
 
 
 # Video de la funcionalidad Create Posts
 
 
-https://user-images.githubusercontent.com/78746286/117514980-c1e72300-af5a-11eb-91f8-559ae5ecd82a.mp4
+
 
 
 # Video de la funcionalidad Manage Tags
