@@ -260,6 +260,8 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Javascript
 * [Git](https://git-scm.com/downloads) - Git
 * [Ghost](https://github.com/TryGhost/Ghost/tree/3.3.0) - Ghost
+* [Chromedriver](https://chromedriver.chromium.org/downloads) - chromedriver
+* [Ruby](https://rubyinstaller.org/) - Ruby
 
 ## Autores ✒️
 
