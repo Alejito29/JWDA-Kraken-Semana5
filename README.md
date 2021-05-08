@@ -258,6 +258,8 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Kraken](https://github.com/TheSoftwareDesignLab/KrakenMobile/archive/refs/tags/1.0.9.zip.) - Kraken
 * [Chrome](https://www.google.com/intl/es/chrome/?brand=UUXU&gclid=CjwKCAjw7diEBhB-EiwAskVi10CI0gLPlO0E3zn_0-3gOnt60O2j_i2Jr_gHLJIEkfyP0JssFBki4hoC4sYQAvD_BwE&gclsrc=aw.ds) - Chrome
 * [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Javascript
+* [Git](https://git-scm.com/downloads) - Git
+* [Ghost](https://github.com/TryGhost/Ghost/tree/3.3.0) - Ghost
 
 ## Autores ✒️
 
