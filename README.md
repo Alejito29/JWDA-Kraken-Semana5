@@ -166,14 +166,15 @@ El siguiente paso
 Clonar el repositorio a traves de git siguiendo los siguientes pasos 
 ```
 
-* Crear una carpeta vacia en cualquier ubicacion de su equipo 
+* Crear una carpeta vacia en cualquier ubicacion de su equipo, es importante que no contenga espacios en blanco 
+ 
 * Abrir la terminal y ubicarse en la ruta donde se encuentra creada la carpeta a traves de la terminal 
 
-![ruta terminal](https://user-images.githubusercontent.com/78820446/117470409-626a2280-af1c-11eb-94ee-e5463c3e506e.PNG)
 
 * Clonar el repositorio a traves del siguiente commando  **git clone https://github.com/angelicamariarodriguez/JWDA-Semana5**
 
-![git clone](https://user-images.githubusercontent.com/78820446/117471313-5af74900-af1d-11eb-9738-752c4f613512.PNG)
+![git](https://user-images.githubusercontent.com/78820446/117548460-c7944580-affa-11eb-87bd-e5e574837e68.PNG)
+
 
 
 
@@ -184,13 +185,17 @@ El siguiente paso
 Dirigirse a  la carpeta clonada con la terminal del paso anterior 
 ```
 
-* Sobre la carpeta creada en el paso anterior y el proyecto clonado, debe ejecutarse el siguiente comando **cd JWDA-Semana5**
+* Sobre la carpeta creada en el paso anterior y el proyecto clonado, debe ejecutarse el siguiente comando **cd JWDA-Kraken-Semana5\proyecto**
 
-![CARPETA ](https://user-images.githubusercontent.com/78820446/117472609-b1b15280-af1e-11eb-8bd0-faa93ddb3865.PNG)
+![cd](https://user-images.githubusercontent.com/78820446/117548561-47221480-affb-11eb-8e16-2f6824ba9f5c.PNG)
 
-* Sobre la carpeta **JWDA-Semana5** ejecutar **npm install** no debe salir ningun error en el proceso de instalacion
 
-![npm install ](https://user-images.githubusercontent.com/78820446/117474290-68fa9900-af20-11eb-891f-1ef3f9145f92.PNG)
+* Sobre la carpeta **proyecto** ejecutar **bundle install** no debe salir ningun error en el proceso de instalacion, en caso de salir algun error debe revisar la instalacion de kraken 
+
+![bundle install](https://user-images.githubusercontent.com/78820446/117548609-83ee0b80-affb-11eb-9156-42676e71ce9f.PNG)
+
+
+
 
 ## Funcionalidades y estrategias 🚗
 
