@@ -3,8 +3,8 @@ Feature: Manage Pages
   @user1 @web
   Scenario: Login with valid user and email, then click in pages and only filters  the first option
     Given I navigate to page "http://localhost:2368/ghost/#/signin"
-    Then I enter "prueba@gmail.com" into input field having id "ember8"
-    Then I enter "123456789*" into input field having id "ember10"
+    Then I enter "<USER>" into input field having id "ember8"
+    Then I enter "<PASSWORD>" into input field having id "ember10"
     Then I click on element having id "ember12"
     Then I wait for 3 seconds
     When I click on element having css selector "a[href='#/pages/']"
