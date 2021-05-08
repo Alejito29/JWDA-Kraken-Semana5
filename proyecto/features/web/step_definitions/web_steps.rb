@@ -25,5 +25,28 @@ if ENV["ADB_DEVICE_ARG"].nil?
   end
   
 
+  Then(/^I enter "([^\"]*)" into input field having xpath "([^\"]*)"$/) do |text, xpath|
+    @driver.find_element(:xpath, xpath).clear
+    @driver.find_element(:xpath, xpath).send_keys(text)
+    sleep 2
+   end
+
+   Then(/^I select option with value "(.*?)" for dropdown having xpath "([^\"]*)"$/) do |op_value, sel_id|
+    drop = @driver.find_element(:xpath, sel_id)
+    choose = Selenium::WebDriver::Support::Select.new(drop)
+    choose.select_by(:value, op_value)
+    sleep 2
+   end
+ 
+   Then(/^I verify "([^\"]*)" into input field having xpath "([^\"]*)"$/) do |text, xpath|
+    @driver.find_element(:xpath, xpath).text.include?(text)
+    sleep 2
+   end
+ 
+   Then(/^I verify "([^\"]*)" into field having xpath "([^\"]*)"$/) do |text, xpath|
+    @driver.find_element(:xpath, xpath).text.include?(text)
+    sleep 2
+   end
+
 
 end
