@@ -97,14 +97,25 @@ Revisar que tenga instalado ruby de manera correcta
 El siguiente paso
 
 ```
-Revisar que tenga instalado java instalado y configurado 
+Revisar que tenga instalado java  y configurado 
 ```
 
 * Sobre la terminal ejecutada debe ejecutar el siguiente comando **java  -version** en caso que no aparesca la version deberia revisar la instalacion 
 
 ![Java](https://user-images.githubusercontent.com/78820446/117546069-2ef7c880-afee-11eb-9eda-64cd2bdd8a10.PNG)
 
-* Si se reconoce el comando **java -version**
+* Si se reconoce el comando **java -version** debera configurar las siguientes variables de entorno en el computador 
+
+  - JAVA_HOME Ingresar la ruta donde se encuentra instalado su JDK 
+
+![JAVA ENTORNO](https://user-images.githubusercontent.com/78820446/117546738-80558700-aff1-11eb-85c4-91102e2994dd.PNG)
+
+  - Adicional agregar las siguientes variables de entorno en la opcion de **path**:  **%JAVA_HOME%\bin** 
+
+![JAVA ENTORNO](https://user-images.githubusercontent.com/78820446/117546768-b72b9d00-aff1-11eb-9bc9-324525a90433.PNG)
+
+
+
 
 El siguiente paso
 
