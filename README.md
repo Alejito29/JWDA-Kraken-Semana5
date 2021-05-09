@@ -228,16 +228,20 @@ Este proyecto está probando las siguientes funcionalidades:
 
 Para ejecutar unicamente debe  hacer lo siguiente:
 
-```
-Ubicarse en la carpeta donde realizo la instalacion de bundle install, una ves ubicado en la carpeta de proyectos debera ejecutar el siguiente comando bundle exec kraken-mobile run, en este caso si realizo las configuraciones de una manera correcta debera empezar a ejecutarse los test, en caso contrario debera revisar alguna de los pasos de instalacion 
 
-```
+1. Ubicarse en la carpeta donde realizo la instalacion de bundle install, una vez ubicado en la carpeta de proyectos debera ejecutar el comando **bundle exec kraken-mobile setup**, allí deberá seleccionar 1 usuario web. Esto le creará el archivo **kraken_mobile_settings.json**.
+2. Luego deberá modificar las variables **USER** y **PASSWORD** en el archivo **kraken_mobile_properties.json**, con sus credenciales registradas en Ghost. Por ejemplo:
 
-![Test](https://user-images.githubusercontent.com/78820446/117548877-e8f63100-affc-11eb-8b66-73b9c4db6e8f.PNG)
+    **"USER":"arodriguezt9509@gmail.com",
+ 
+    **"PASSWORD":"********"
+      
+3. Asegurese de tener la vista del sitio como pública. Para esto debe ir a "General Settings" en Ghost y en la sección "Advanced Settings" debe tener deshabilitada la opción de "Make this site private", como se observa a continuación.
 
-* Resultado del index.html en la carpeta **JWDA-Kraken-Semana5\proyecto\reports\efcae4d5c418c58304d74bd3f8f17a5015496a2f5deddddaea015a17398442f3\index.html**
+![image](https://user-images.githubusercontent.com/78829003/117516478-d75e4c00-af5e-11eb-8002-3ff61f2e25d6.png)
 
-![Captura](https://user-images.githubusercontent.com/78820446/117548984-86e9fb80-affd-11eb-9de3-854affc1cdec.PNG)
+4. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_mobile_properties.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberaá revisar alguno de los pasos de instalación. 
+
 
 
 ### Analice las pruebas end-to-end 🔩
@@ -271,65 +275,6 @@ _Autor_
 * **Dario Fernando Herrera Gonzalez** - *Trabajo Inicial* - [dherrera54](https://github.com/dherrera54)
 * **Angelica Maria Rodriguez Torres** - *Trabajo Inicial* - [angelicamariarodriguez](https://github.com/angelicamariarodriguez9)
 * **Jorge Ivan Barrera Rea** - *Trabajo Inicial* - [ivanbrij](https://github.com/ivanbrij)
-
-## Imagenes ✒️
-
-Muestra las imagenes tomadas por la herramienta
-
-
-# Imagenes  de la funcionalidad Login
-
-![2a3b7e25556eb2bb5336fdd3](https://user-images.githubusercontent.com/78820446/117549054-f06a0a00-affd-11eb-97df-868e8dc226ad.png)
-
-![1463f112e97f62838d9a9ed7](https://user-images.githubusercontent.com/78820446/117549055-f233cd80-affd-11eb-9197-8660b3ab1990.png)
-
-![50166cce397356b2812bd5e4](https://user-images.githubusercontent.com/78820446/117549059-f7911800-affd-11eb-91ce-a39cde91315c.png)
-
-![b36af3b6507ed4dc1d99c40b](https://user-images.githubusercontent.com/78820446/117549060-fb249f00-affd-11eb-8459-820d6d74440e.png)
-
-![d82204966f5c675510098863](https://user-images.githubusercontent.com/78820446/117549063-fd86f900-affd-11eb-91eb-fc6471a44c97.png)
-
-
-
-# Video de la funcionalidad Manage General Settings
-
-
-
-# Vide de la funcionalidad Manage Pages
-
-
-![90bda705c066fdd40b51f11c](https://user-images.githubusercontent.com/78820446/117549087-1f807b80-affe-11eb-9ee4-884b14c4bad2.png)
-
-![94ee8aef4c6b15fd14c8df3a](https://user-images.githubusercontent.com/78820446/117549090-227b6c00-affe-11eb-9cad-348df0088718.png)
-
-![0639f3a9dc7b465ddc0eed71](https://user-images.githubusercontent.com/78820446/117549093-24ddc600-affe-11eb-8275-bcc653cf579a.png)
-
-![5142df91ef7c667b6c00b849](https://user-images.githubusercontent.com/78820446/117549098-2909e380-affe-11eb-96b6-bedaffdae2aa.png)
-
-![8462c47998cce801f78dda22](https://user-images.githubusercontent.com/78820446/117549102-2c04d400-affe-11eb-9d94-f154e70be02c.png)
-
-![a215ab78840fda95440e958b](https://user-images.githubusercontent.com/78820446/117549105-2effc480-affe-11eb-8040-0d5a48b0eff9.png)
-
-![a70789ec58cb6c26348888ef](https://user-images.githubusercontent.com/78820446/117549110-31fab500-affe-11eb-9fb1-fb2844f2c204.png)
-
-![bcb48b2bff7043d2826ea43e](https://user-images.githubusercontent.com/78820446/117549113-345d0f00-affe-11eb-8330-e92424ef0281.png)
-
-![c2c049a289aea53b47764639](https://user-images.githubusercontent.com/78820446/117549116-37f09600-affe-11eb-81aa-b795cff433cd.png)
-
-![d28f8370c91dc19456cfd52d](https://user-images.githubusercontent.com/78820446/117549121-3c1cb380-affe-11eb-9724-ab58996594b7.png)
-
-![dd32beba3477e1f682b7e8be](https://user-images.githubusercontent.com/78820446/117549124-3f17a400-affe-11eb-948c-6d4cf96e055c.png)
-
-![ebc4f4ff97277282856bb878](https://user-images.githubusercontent.com/78820446/117549130-42129480-affe-11eb-9659-eacf2247819e.png)
-
-
-# Video de la funcionalidad Create Posts
-
-
-
-
-
-# Video de la funcionalidad Manage Tags
 
 
 
