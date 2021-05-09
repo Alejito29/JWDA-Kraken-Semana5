@@ -232,7 +232,7 @@ Para ejecutar unicamente debe  hacer lo siguiente:
 1. Ubicarse en la carpeta donde realizo la instalacion de bundle install, una vez ubicado en la carpeta de proyectos debera ejecutar el comando **bundle exec kraken-mobile setup**, allí deberá seleccionar 1 usuario web. Esto le creará el archivo **kraken_mobile_settings.json**.
 2. Luego deberá modificar las variables **USER** y **PASSWORD** en el archivo **kraken_mobile_properties.json**, con sus credenciales registradas en Ghost. Por ejemplo:
 
-    **"USER":"arodriguezt9509@gmail.com",
+    **"USER":"arodriguezt9509@gmail.com",**
  
     **"PASSWORD":"********"
       
