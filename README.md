@@ -211,7 +211,7 @@ Este proyecto está probando las siguientes funcionalidades:
     - Iniciar sesión en Ghost ir a configuraciones generales y editar el título y la descripción del sitio.
     - Iniciar sesión en Ghost ir a configuraciones generales y editar la zona horaria del sitio.
     - Iniciar sesión en Ghost ir a configuraciones generales y poner el sitio como privado.
-    - Iniciar sesión en Ghost ir a configuraciones generales y poner el sitio como público.
+    - Iniciar sesión en Ghost ir a configuraciones generales y editar el campo de lenguage del sitio.
 4. Manage Login:
     - Login con usuario y contraseña incorrectos
     - Login con usuario y contraseña correctos
