@@ -172,7 +172,7 @@ Clonar el repositorio a traves de git siguiendo los siguientes pasos
 * Abrir la terminal y ubicarse en la ruta donde se encuentra creada la carpeta a traves de la terminal 
 
 
-* Clonar el repositorio a traves del siguiente commando  **git clone https://github.com/angelicamariarodriguez/JWDA-Semana5**
+* Clonar el repositorio a traves del siguiente commando  **git clone https://github.com/Alejito29/JWDA-Kraken-Semana5**
 
 ![git](https://user-images.githubusercontent.com/78820446/117548460-c7944580-affa-11eb-87bd-e5e574837e68.PNG)
 
@@ -223,6 +223,10 @@ Este proyecto está probando las siguientes funcionalidades:
     - Creación de post con estado published usando el botón "New Post" desde listado de post
     - Creación de post con estado scheduled usando el botón "New Post" desde listado de post
  5. Manage Tags:
+    - Iniciar sesión en Ghost ir a tags, crear un nuevo tag con nombre y descripción
+    - Iniciar sesión en Ghost ir a tags, editar el nombre de un tag existente
+    - Iniciar sesión en Ghost ir a tags, agregar metadata y descripción de metadata a un tag existente
+    - Iniciar sesión en Ghost ir a tags, eliminar un tag existente
 
 # Ejecutando las pruebas ⚙️
 
