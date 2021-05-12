@@ -59,6 +59,7 @@ GEM
     escape (0.0.4)
     faker (2.10.0)
       i18n (>= 1.6, < 1.8)
+    ffi (1.15.0)
     ffi (1.15.0-x64-mingw32)
     gherkin (5.1.0)
     httpclient (2.8.3)
@@ -75,6 +76,8 @@ GEM
     multi_test (0.1.2)
     necromancer (0.4.0)
     nokogiri (1.11.3-x64-mingw32)
+      racc (~> 1.4)
+    nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
     parallel (1.14.0)
     pastel (0.7.4)
@@ -114,6 +117,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   kraken-mobile!

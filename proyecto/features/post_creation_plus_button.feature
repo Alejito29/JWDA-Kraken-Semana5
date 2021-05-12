@@ -2,6 +2,7 @@ Feature: Post creation plus button
 
   @user1 @web
   Scenario: As a user I create a post using plus button on home page
+    Given I set scenario "Post_creation_plus_button" and version app "3.3.0"
     Given I navigate to page "http://localhost:2368/ghost/#/signin"
     Then I enter "<USER>" into input field having id "ember8"
     Then I enter "<PASSWORD>" into input field having id "ember10"

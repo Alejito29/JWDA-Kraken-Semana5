@@ -2,6 +2,7 @@ Feature: Add metadata to an existing tag
 
   @user1 @web
   Scenario: As a user I create a new tag on on tag manage menu
+    Given I set scenario "Tag_manage_add_metadata" and version app "3.3.0"
     Given I navigate to page "http://localhost:2368/ghost/#/signin"
     Then I enter "<USER>" into input field having id "ember8"
     Then I enter "<PASSWORD>" into input field having id "ember10"

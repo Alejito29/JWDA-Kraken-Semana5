@@ -1,3 +1,7 @@
+$featurescenariostep = ''
+$versionapp = ''
+_id = 0
+
 if ENV["ADB_DEVICE_ARG"].nil?
   require 'kraken-mobile/steps/web/kraken_steps'
 
@@ -5,6 +9,11 @@ if ENV["ADB_DEVICE_ARG"].nil?
     $url_variable = @driver.current_url    
     File.write('./.variable.txt', $url_variable)
     puts($url_variable) 
+  end
+
+  Given(/^I set scenario "([^\"]*)" and version app "([^\"]*)"$/) do |scenario, version|
+    $featurescenariostep = scenario
+    $versionapp = version
   end
 
   Given(/^I navigate to page with the url stored in the variable$/) do
@@ -48,5 +57,14 @@ if ENV["ADB_DEVICE_ARG"].nil?
     sleep 2
    end
 
+# Hooks
+  AfterStep do |_scenario|
+    Dir.mkdir("./vrt") unless File.exist?("./vrt")
+    Dir.mkdir("./vrt/#{$versionapp}") unless File.exist?("./vrt/#{$versionapp}")
+    Dir.mkdir("./vrt/#{$versionapp}/#{$featurescenariostep}") unless File.exist?("./vrt/#{$versionapp}/#{$featurescenariostep}")
+    path = "./vrt/#{$versionapp}/#{$featurescenariostep}/#{$featurescenariostep}_#{_id += 1}.png"
+    @driver.save_screenshot(path)
+    embed(path, 'image/png', File.basename(path))
+  end
 
 end
