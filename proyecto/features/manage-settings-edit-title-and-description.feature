@@ -1,7 +1,7 @@
 Feature: Manage Settings
 
   @user1 @web
-  Scenario: As a first user I say hi to a second user
+  Scenario: As a user I edit the title and description of the site
     Given I set scenario "Manage_settings_edit_title_description" and version app "3.3.0"
     Given I navigate to page "http://localhost:2368/ghost/#/signin/"
     Then I enter "<USER>" into input field having id "ember8"
