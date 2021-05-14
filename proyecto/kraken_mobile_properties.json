@@ -1,6 +1,7 @@
 {
   "@user1":{
-  "USER":"jorge@gmail.com",
+  "USER":"prueba@gmail.com",
  
-  "PASSWORD":"accedian1!"}
+  "PASSWORD":"123456789+",
+  "VERSION":"3.3.0"}
 }
