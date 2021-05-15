@@ -2,7 +2,7 @@ Feature: Manage Pages
 
   @user1 @web
   Scenario: Login with valid user and email, then click in pages and only filters  the first option and second option
-    Given I set scenario "Pages_filter_by_item_1st_to_4th" and version app "3.3.0"
+    Given I set scenario "Pages_filter_by_item_1st_to_4th" and version app "<VERSION>"
     Given I navigate to page "http://localhost:2368/ghost/#/signin"
     Then I enter "<USER>" into input field having id "ember8"
     Then I enter "<PASSWORD>" into input field having id "ember10"
