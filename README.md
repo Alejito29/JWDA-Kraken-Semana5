@@ -276,8 +276,19 @@ Para ejecutar debe  hacer lo siguiente:
 2. Luego de moverse a la rama Resemble/Semana6 debe ir a la carpeta **resemble** ejecutando el siguiente comando **cd resemble**
 3. Allí deberá ejecutar el comando **npm install**
 4. En el archivo **index.js** que se encuentra dentro de la carpeta **resemble** deberá modificar el path que contiene a la carpeta **resemble**, como se indica en la siguiente imagen:
-5. Para ejecutar el vrt en cada escenario deberá modificar la variable **scenario** y la variable **steps**, teniendo en cuenta lo siguiente:
+![image](https://user-images.githubusercontent.com/78829003/118384661-7f15f280-b5cd-11eb-8467-f3b1a93bc2b5.png)
+5. Para ejecutar el vrt para cada uno de los escenarios deberá modificar la variable **scenario** y la variable **steps**, teniendo en cuenta lo siguiente:
 6. Luego de modificar las variables anteriores, deberá ejecutar el comando **node index.js** lo cual le creará una carpeta dentro de la carpeta **results** con el nombre del escenario ejecutado. Dentro de esta carpeta encontrará las imágenes del resultado de las comparaciones realizadas paso a paso y el reporte de cada una de estas comparaciones, igualmente por cada paso.
+
+![image](https://user-images.githubusercontent.com/78829003/118384703-ecc21e80-b5cd-11eb-8b9c-41c7bc78ceef.png)
+
+### Analice el vrt 🔩
+
+Para cada uno de los escenarios ejecutados, encontrará dentro de la carpeta **results** una carpeta con el nombre del escenario. Dentro de esta carpeta podrá visualizar las imágenes del resultado de la comparación de cada uno de los pasos ejecutados en el escenario para Ghost 3.3.0 y Ghost 3.42.5. Igualmente podrá visualizar un reporte que le mostrará la imagen del paso ejecutado en Ghost 3.3.0, la imagen del paso ejecutado en Ghost 3.42.5 y las diferencias entre estas dos imágenes:
+![image](https://user-images.githubusercontent.com/78829003/118384789-973a4180-b5ce-11eb-83c6-55d8c6132bd2.png)
+
+
+
 
 
 ## Construido con 🛠️
