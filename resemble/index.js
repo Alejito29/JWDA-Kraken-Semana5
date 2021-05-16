@@ -9,8 +9,8 @@ async function executeTest(){
     let resultInfo = {}
 
     let path = `C:/Users/USUARIO/Desktop/VRTResemble/JWDA-Kraken-Semana5`  
-    let scenario = "Tag_manage_delete_tag"
-    let steps = 13
+    let scenario = "Login_invalid_user_valid_pass"
+    let steps = 6
 
 
     for(let i = 1; i < steps+1; i++){
