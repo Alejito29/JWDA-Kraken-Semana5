@@ -300,11 +300,28 @@ Para ejecutar debe  hacer lo siguiente:
 
 ![image](https://user-images.githubusercontent.com/78829003/118384703-ecc21e80-b5cd-11eb-8b9c-41c7bc78ceef.png)
 
-### Analice el vrt 🔩
+### Analice el vrt con Resemble🔩
 
 Para cada uno de los escenarios ejecutados, encontrará dentro de la carpeta **results** una carpeta con el nombre del escenario. Dentro de esta carpeta podrá visualizar las imágenes del resultado de la comparación de cada uno de los pasos ejecutados en el escenario para Ghost 3.3.0 y Ghost 3.42.5. Igualmente podrá visualizar un reporte que le mostrará la imagen del paso ejecutado en Ghost 3.3.0, la imagen del paso ejecutado en Ghost 3.42.5 y las diferencias entre estas dos imágenes:
 
 ![image](https://user-images.githubusercontent.com/78829003/118384789-973a4180-b5ce-11eb-83c6-55d8c6132bd2.png)
+
+# Ejecutando VRT con Backstop.js ⚙️
+
+Para ejecutar debe  hacer lo siguiente:
+
+1. **Para ejecutar VRT en Resemble.js** debe descargar la CLI. Para esto abra una terminal y ejecute el comando **npm install -g backstopjs**
+2. Luego debe moverse a la rama  Backstop/Semana6  ejecutando el comando **git checkout Backstop/Semana6** 
+3. Luego de moverse a la rama  Backstop/Semana6 debe ir a la carpeta **backstop** ejecutando el siguiente comando **cd backstop**
+4. Allí deberá ejecutar el comando **backstop test**
+5. Esto le abrirá una ventana en el browser que le mostrará el resultado para cada uno de los pasos del escenario Login with invalid user and valid password.
+
+### Analice el vrt con Backstop 🔩
+
+Luego de ejecutar el comando backstop test se le abrirá automaticamente una nueva ventana en el browser la cual mostrará el reporte con los resultados obtenidos. Para cada uno de los pasos del escenario se mostrará la imagen de referencia, la imagen de test y la imagen con las diferencias. Estos resultados se mostrán para dos tipos de pantallas.
+
+![image](https://user-images.githubusercontent.com/78829003/118386658-ab863a80-b5de-11eb-8deb-614b6a3645d8.png)
+
 
 
 
