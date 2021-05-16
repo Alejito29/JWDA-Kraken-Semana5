@@ -1,0 +1,72 @@
+{
+  "path": "C:/Users/USUARIO/Desktop/backstop",
+  "id": "Ghost",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Login with invalid user and valid password step 1",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "./backstop_data/3.3.0/Login_invalid_user_valid_pass_1.png",
+      "referenceUrl": "./backstop/backstop_data/3.42.5/Login_invalid_user_valid_pass_1.png"
+    },
+    {
+      "label": "Login with invalid user and valid password Step 2",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "./backstop_data/3.3.0/Login_invalid_user_valid_pass_2.png",
+      "referenceUrl": "./backstop/backstop_data/3.42.5/Login_invalid_user_valid_pass_2.png"
+    },
+    {
+      "label": "Login with invalid user and valid password Step 3",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "./backstop_data/3.3.0/Login_invalid_user_valid_pass_3.png",
+      "referenceUrl": "./backstop/backstop_data/3.42.5/Login_invalid_user_valid_pass_3.png"
+    },
+    {
+      "label": "Login with invalid user and valid password Step 4",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "./backstop_data/3.3.0/Login_invalid_user_valid_pass_4.png",
+      "referenceUrl": "./backstop/backstop_data/3.42.5/Login_invalid_user_valid_pass_4.png"
+    },
+    {
+      "label": "Login with invalid user and valid password Step 5",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "./backstop_data/3.3.0/Login_invalid_user_valid_pass_5.png",
+      "referenceUrl": "./backstop/backstop_data/3.42.5/Login_invalid_user_valid_pass_5.png"
+    },
+    {
+      "label": "Login with invalid user and valid password Step 6",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "./backstop_data/3.3.0/Login_invalid_user_valid_pass_6.png",
+      "referenceUrl": "./backstop/backstop_data/3.42.5/Login_invalid_user_valid_pass_6.png"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
