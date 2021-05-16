@@ -147,14 +147,14 @@ El siguiente paso
 
 
 ```
-Revisar que tenga instalado Ghost 3.3.0 de manera correcta, ya registrado un usuario e ingresando de manera correcta
+Revisar que tenga instalado Ghost 3.3.0 y Ghost 3.42.5 de manera correcta, ya registrado un usuario e ingresando de manera correcta. Dependiendo las pruebas que vaya a ejecutar debe asegurarse de haber inicializado la versión correcta.
 ```
 
-* Sobre la carpeta que tiene configurado Ghost 3.3.0 debe ejecutar el siguiente comando **ghost start**, en caso de no salir de la siguiente manera tiene un error en la instalacion de Ghost 3.3.0 que debera revisar 
+* Sobre la carpeta que tiene configurado Ghost 3.3.0 o Ghost 3.42.5 debe ejecutar el siguiente comando **ghost start**, en caso de no salir de la siguiente manera tiene un error en la instalacion de Ghost 3.3.0 que debera revisar 
 
 ![ghost start](https://user-images.githubusercontent.com/78820446/117476511-a102db80-af22-11eb-91c7-78b66cf5dc65.PNG)
 
-* En caso de ser la primera vez en Ghost 3.3.0 debera registrarse y evidenciar que ingresa a la pantalla del home de Ghost, en caso que no ingrese a la pantalla, tiene algo mal configurado que debera revisar.
+* En caso de ser la primera vez en Ghost 3.3.0 o en Ghost 3.42.5 deberá registrarse y evidenciar que ingresa a la pantalla del home de Ghost, en caso que no ingrese a la pantalla, tiene algo mal configurado que debera revisar.
 
 ![Ghost](https://user-images.githubusercontent.com/78820446/117479495-060c0080-af26-11eb-9845-2cf9a2e9ed23.PNG)
 
@@ -195,6 +195,7 @@ Dirigirse a  la carpeta clonada con la terminal del paso anterior
 
 ![bundle install](https://user-images.githubusercontent.com/78820446/117548609-83ee0b80-affb-11eb-9156-42676e71ce9f.PNG)
 
+* Ubiquese en la carpeta donde realizo la instalacion de bundle install, una vez ubicado en la carpeta de proyectos debera ejecutar el comando **bundle exec kraken-mobile setup**, allí deberá seleccionar 1 usuario web. Esto le creará el archivo **kraken_mobile_settings.json**.
 
 
 
@@ -228,30 +229,55 @@ Este proyecto está probando las siguientes funcionalidades:
     - Iniciar sesión en Ghost ir a tags, agregar metadata y descripción de metadata a un tag existente
     - Iniciar sesión en Ghost ir a tags, eliminar un tag existente
 
-# Ejecutando las pruebas ⚙️
+# Ejecutando pruebas E2E sobre Ghost 3.3.0 ⚙️
 
 Para ejecutar unicamente debe  hacer lo siguiente:
 
-
-1. Ubicarse en la carpeta donde realizo la instalacion de bundle install, una vez ubicado en la carpeta de proyectos debera ejecutar el comando **bundle exec kraken-mobile setup**, allí deberá seleccionar 1 usuario web. Esto le creará el archivo **kraken_mobile_settings.json**.
-2. Luego deberá modificar las variables **USER** y **PASSWORD** en el archivo **kraken_mobile_properties.json**, con sus credenciales registradas en Ghost. Por ejemplo:
+1. **Para ejecutar las pruebas de la versión Ghost 3.3.0** debe ejecutar el comando **git checkout Ghost3.3.0**
+2. Asegurese de haber inicializado ghost en la versión 3.3.0
+3. Luego deberá modificar las variables **USER** y **PASSWORD** en el archivo **kraken_mobile_properties.json**, que está ubicado dentro de la carpeta **proyecto**, con sus credenciales registradas en Ghost 3.3.0. **Por ejemplo:
 
     **"USER":"arodriguezt9509@gmail.com",**
  
     **"PASSWORD":"********"
       
-3. Asegurese de tener la vista del sitio como pública. Para esto debe ir a "General Settings" en Ghost y en la sección "Advanced Settings" debe tener deshabilitada la opción de "Make this site private", como se observa a continuación.
+4. Asegurese de tener la vista del sitio como **pública**. Para esto debe ir a "General Settings" en Ghost y en la sección "Advanced Settings" debe tener deshabilitada la opción de "Make this site private", como se observa a continuación.
+
+5. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_mobile_properties.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberaá revisar alguno de los pasos de instalación. 
+
+# Ejecutando pruebas E2E sobre Ghost 3.42.5 ⚙️
+
+Para ejecutar unicamente debe  hacer lo siguiente:
+
+1. **Para ejecutar las pruebas de la versión Ghost 3.42.5** debe ejecutar el comando **git checkout Ghost3.42.5**
+2. Asegurese de haber inicializado Ghost en la versión 3.42.5
+3. Luego deberá modificar las variables **USER** y **PASSWORD** en el archivo **kraken_mobile_properties.json**, ue está ubicado dentro de la carpeta **proyecto**, con sus credenciales registradas en Ghost 3.42.5. **Por ejemplo:
+
+    **"USER":"arodriguezt9509@gmail.com",**
+ 
+    **"PASSWORD":"********"
+    
+4.  Asegurese de tener la vista del sitio como **pública**. Para esto debe ir a "General Settings" en Ghost y en la sección "Advanced Settings" debe tener deshabilitada la opción de "Make this site private", como se observa a continuación.
 
 ![image](https://user-images.githubusercontent.com/78829003/117516478-d75e4c00-af5e-11eb-8002-3ff61f2e25d6.png)
 
-4. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_mobile_properties.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberaá revisar alguno de los pasos de instalación. 
-
+5. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_mobile_properties.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberaá revisar alguno de los pasos de instalación. 
 
 
 ### Analice las pruebas end-to-end 🔩
 
 En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los resultados de la consola y ver los resultados en la carpeta **JWDA-Kraken-Semana5\proyecto\reports**
 
+# Ejecutando VRT con Resemble.js ⚙️
+
+Para ejecutar debe  hacer lo siguiente:
+
+1. **Para ejecutar VRT en Resemble.js** debe ejecutar el comando **git checkout Resemble/Semana6**
+2. Luego de moverse a la rama Resemble/Semana6 debe ir a la carpeta **resemble** ejecutando el siguiente comando **cd resemble**
+3. Allí deberá ejecutar el comando **npm install**
+4. En el archivo **index.js** que se encuentra dentro de la carpeta **resemble** deberá modificar el path que contiene a la carpeta **resemble**, como se indica en la siguiente imagen:
+5. Para ejecutar el vrt en cada escenario deberá modificar la variable **scenario** y la variable **steps**, teniendo en cuenta lo siguiente:
+6. Luego de modificar las variables anteriores, deberá ejecutar el comando **node index.js** lo cual le creará una carpeta dentro de la carpeta **results** con el nombre del escenario ejecutado. Dentro de esta carpeta encontrará las imágenes del resultado de las comparaciones realizadas paso a paso y el reporte de cada una de estas comparaciones, igualmente por cada paso.
 
 
 ## Construido con 🛠️
