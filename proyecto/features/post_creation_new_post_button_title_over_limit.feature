@@ -10,10 +10,11 @@ Feature: Create a post using new button
     Then I should see text "View site"
     Then I click on element having xpath "//a[@href='#/posts/']"
     Then I click on element having css selector ".gh-btn.gh-btn-green.ember-view"
-    Then I enter "$name_1" into input field having css selector ".gh-editor-title"
+    Then I enter "" into input field having css selector ".gh-editor-title"
     Then I enter "$name_2" into input field having css selector ".koenig-editor__editor"
-    When I click on element having css selector "a[href='#/posts/']"
-    Then I wait for 2 seconds
-    Then I should see text "$name_1"
+    Then I enter "$name_1" into input field having css selector ".gh-editor-title"
+    Then I click on element having css selector ".gh-publishmenu-trigger"
+    Then I click on element having css selector ".gh-publishmenu-button"
+    Then I should see text "Saving failed: Title cannot be longer tha 255 characters."
 
 

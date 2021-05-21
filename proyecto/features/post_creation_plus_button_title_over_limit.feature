@@ -9,9 +9,10 @@ Feature: Post creation plus button
     Then I click on element having id "ember12"
     Then I should see text "View site"
     Then I click on element having css selector ".gh-secondary-action.gh-nav-new-post.ember-view"
-    Then I enter "$name_1" into input field having css selector ".gh-editor-title"
+    Then I enter "" into input field having css selector ".gh-editor-title"
     Then I enter "$name_2" into input field having css selector ".koenig-editor__editor"
-    When I click on element having css selector "a[href='#/posts/']"
-    Then I wait for 2 seconds
-    Then I should see text "$name_1"
+    Then I enter "$name_1" into input field having css selector ".gh-editor-title"
+    Then I click on element having css selector ".gh-publishmenu-trigger"
+    Then I click on element having css selector ".gh-publishmenu-button"
+    Then I should see text "Saving failed: Title cannot be longer than 255 characters."
 
