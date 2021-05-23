@@ -339,7 +339,9 @@ Para ejecutar las pruebas e2e con pool de datos pseudo-aleatorio dinámico estam
 5. Genere los datos pseudo-aleatorios con el siguiente comando **python3 readmockaroo.py**
 6. Luego de ejecutado el script podrá verificar que el archivo **kraken_properties_mockaroo.json** se ha modificado con sus credenciales y otras variables que tienen valores aleatorios generados en **Mockaroo** que se usarán en las pruebas.  
 7. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_properties_mockaroo.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberá revisar alguno de los pasos de instalación. 
-8. Si desea, puede actualizar el pool de datos corriendo nuevamente el script de python realizar las pruebas con nuevos datos
+8. Si desea, puede actualizar el pool de datos corriendo nuevamente el script de python para realizar las pruebas con nuevos datos
+
+En caso de que alguno de los escenarios de prueba falle, puede deberse a que en la generación de datos con **Mockaroo** a algunas de las variables hemos configurado para que en un 20% de las veces genere datos NULL.
 
 ## Pasos para ejecutar el Generador.jar para las pruebas E2E sobre Ghost 3.42.5: Este tiene cubrimientos para generar  los diferentes tipos de datos **Prioriatio, Complemento del pseudo y aleatorio**
 
@@ -375,9 +377,7 @@ https://uniandes-my.sharepoint.com/:v:/g/personal/w_gonzalezg_uniandes_edu_co/ET
 
 En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los logs de la consola y ver los resultados en la carpeta **JWDA-Kraken-Semana5\proyecto\reports**
 
-En caso de que alguno de los escenarios de prueba falle, puede deberse a que en la generación de datos con **Mockaroo** a algunas de las variables hemos configurado para que en un 20% de las veces genere datos NULL.
-
-**Nota: La descripción de la estrategia usada para la generación de datos pseudo-aleatorio dinámico y la definición de los oráculos, la puede encontrar como una página en la wiki de este repositorio.**
+**NOTA: La descripción de la estrategia usada para la generación de datos y la definición de los oráculos, la puede encontrar como una página en la wiki de este repositorio.**
 
 
 ## Construido con 🛠️
