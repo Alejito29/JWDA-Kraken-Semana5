@@ -364,7 +364,7 @@ Observacion en la wiki se encuentra el detalle tecnico como ejecutar cada prueba
 
 Adicional en caso que desen tener acceso al fuente del codigo java lo encontraran aca **https://github.com/Alejito29/JWDA-Java-Semana7**
 
-## Video de explicacion 
+## Video de explicacion para ejecutar el Generador.jar 
 
 En este enlace podrán encontrar un pequeño video donde explicamos la forma de  generar los datos antes de ejecutar los test de las diferentes formas
 
