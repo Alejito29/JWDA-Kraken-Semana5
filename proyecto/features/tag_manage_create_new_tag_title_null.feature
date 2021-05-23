@@ -10,7 +10,6 @@ Feature: Create a new tag
     Then I should see text "View site"
     Then I navigate to page "http://localhost:2368/ghost/#/tags"
     Then I click on element having css selector "a[href='#/tags/new/']" 
-    Then I enter "<nulo>" into input field having xpath "(//input[@id='tag-name'])[1]"
     Then I enter "<tagdesnormal>" into input field having css selector ".gh-tag-details-textarea"
     When I click on element having css selector ".gh-btn.gh-btn-blue"
     Then I wait for 2 seconds
