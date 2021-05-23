@@ -341,7 +341,7 @@ Para ejecutar las pruebas e2e con pool de datos pseudo-aleatorio dinámico estam
 7. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_properties_mockaroo.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberá revisar alguno de los pasos de instalación. 
 8. Si desea, puede actualizar el pool de datos corriendo nuevamente el script de python realizar las pruebas con nuevos datos
 
-## Pasos para ejecutar el Generador.jar para las pruebas E2E sobre Ghost 3.42.5: Este tiene cubrimientos para geenrar los diferentes tipos de datos
+## Pasos para ejecutar el Generador.jar para las pruebas E2E sobre Ghost 3.42.5: Este tiene cubrimientos para generar  los diferentes tipos de datos **Prioriatio, Complemento del pseudo y aleatorio**
 
 * Clonar el repositorio **https://github.com/Alejito29/JWDA-Kraken-Semana5**
 
@@ -352,9 +352,17 @@ Para ejecutar las pruebas e2e con pool de datos pseudo-aleatorio dinámico estam
 ![Evidenica jar2](https://user-images.githubusercontent.com/78820446/119274217-70829900-bbd4-11eb-989e-1825cb0150da.png)
 
 
-* Por ultimo debe escoger el nombre del test, cuantas veces se va repetir la creacion y quetipo de dato desea. Con el jar podra crear diferentes tipos de datos, en este caso usted define cuanto dataset desea generar, aunque si genera el maximo cubriria los casos solicitados solo que se demoraria la ejecucion.
+* Por ultimo debe escoger el nombre del test, cuantas veces se va repetir la creacion y que tipo de dato desea. Con el jar podra crear diferentes tipos de datos, en este caso usted define cuanto dataset desea generar, aunque si genera el maximo cubriria los casos solicitados solo que se demoraria la ejecucion.
 
  ![Evidenica jar](https://user-images.githubusercontent.com/78820446/119274137-1bdf1e00-bbd4-11eb-9f1e-ab7cb971bb13.png)
+
+Observacion en la wiki se encuentra el detalle tecnico como ejecutar cada prueba con los diferentes tipos de datos 
+
+* https://github.com/Alejito29/JWDA-Kraken-Semana5/wiki/Pool-de-datos-Apriori
+* https://github.com/Alejito29/JWDA-Kraken-Semana5/wiki/Pool-de-datos-pseudo-aleatorio-din%C3%A1mico
+* https://github.com/Alejito29/JWDA-Kraken-Semana5/wiki/Aleatorio
+
+Adicional en caso que desen tener acceso al fuente del codigo java lo encontraran aca **https://github.com/Alejito29/JWDA-Java-Semana7**
 
 ## Video de explicacion 
 
