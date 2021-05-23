@@ -322,9 +322,33 @@ Luego de ejecutar el comando backstop test se le abrirá automaticamente una nue
 
 ![image](https://user-images.githubusercontent.com/78829003/118386658-ab863a80-b5de-11eb-8deb-614b6a3645d8.png)
 
+# Ejecutando pruebas E2E con pool de datos pseudo-aleatorio dinámico sobre Ghost 3.42.5 ⚙️
+
+Para ejecutar las pruebas e2e con pool de datos pseudo-aleatorio dinámico estamos usando la herramienta **Mockaroo** y un script en **Python3** llamado **readmockaroo.py**. El script se encarga de generar los datos pseudo-aleatorios antes que se realicen las pruebas. Como requisito se debe tener installado **Python3** y la librería de python **requests**. 
+
+1. **Para ejecutar las pruebas con pool de datos pseudo-aleatorio dinámico sobre la versión Ghost 3.42.5** debe ejecutar el comando **git checkout feature/jb_pool_mockaroo**
+2. Asegurese de haber inicializado Ghost en la versión 3.42.5
+3. Moverse a la carpeta proyecto con el siguiente comando **cd proyecto**
+4. Luego deberá modificar las variables **USER** y **PASSWORD** en el archivo **credentials.json**, que está ubicado en la carpeta **proyecto**, con sus credenciales registradas en Ghost 3.42.5. **Por ejemplo:
+
+    **"USER":"prueba@gmail.com",**
+ 
+    **"PASSWORD":"********"
+      
+5. Genere los datos pseudo-aleatorios con el siguiente comando **python3 readmockaroo.py**
+6. Luego de ejecutado el script podrá verificar que el archivo **kraken_properties_mockaroo.json** se ha modificado con sus credenciales y otras variables que tienen valores aleatorios generados en **Mockaroo** que se usarán en las pruebas.  
+7. Por último, ejecute el siguiente comando: **bundle exec kraken-mobile run --properties=./kraken_properties_mockaroo.json**, en este caso si realizo las configuraciones de una manera correcta deberán empezar a ejecutarse los tests, en caso contrario deberá revisar alguno de los pasos de instalación. 
+8. Si desea, puede actualizar el pool de datos corriendo nuevamente el script de python realizar las pruebas con nuevos datos
 
 
 
+### Analice las pruebas end-to-end con pool de datos pseudo-aleatorio dinámico🔩
+
+En este caso para el analizis de las pruebas ejecutadas unicamente debe evidenciar los logs de la consola y ver los resultados en la carpeta **JWDA-Kraken-Semana5\proyecto\reports**
+
+En caso de que alguno de los escenarios de prueba falle, puede deberse a que en la generación de datos con **Mockaroo** a algunas de las variables hemos configurado para que en un 20% de las veces genere datos NULL.
+
+**Nota: La descripción de la estrategia usada para la generación de datos pseudo-aleatorio dinámico y la definición de los oráculos, la puede encontrar como una página en la wiki de este repositorio.**
 
 
 ## Construido con 🛠️
