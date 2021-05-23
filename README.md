@@ -324,7 +324,7 @@ Luego de ejecutar el comando backstop test se le abrirá automaticamente una nue
 
 # Ejecutando pruebas E2E con pool de datos pseudo-aleatorio dinámico sobre Ghost 3.42.5 ⚙️
 
-Para ejecutar las pruebas e2e con pool de datos pseudo-aleatorio dinámico estamos usando la herramienta **Mockaroo** y un script en **Python3** llamado **readmockaroo.py**. El script se encarga de generar los datos pseudo-aleatorios antes que se realicen las pruebas. Como requisito se debe tener installado **Python3** y la librería de python **requests**. 
+Para ejecutar las pruebas e2e con pool de datos pseudo-aleatorio dinámico estamos usando la herramienta **Mockaroo** y un script en **Python3** llamado **readmockaroo.py**. El script se encarga de generar los datos pseudo-aleatorios antes que se realicen las pruebas. Como requisito se debe tener installado **[Python3](https://www.python.org/downloads/)** y la librería de python **[requests](https://pypi.org/project/requests/)**. 
 
 1. **Para ejecutar las pruebas con pool de datos pseudo-aleatorio dinámico sobre la versión Ghost 3.42.5** debe ejecutar el comando **git checkout feature/jb_pool_mockaroo**
 2. Asegurese de haber inicializado Ghost en la versión 3.42.5
